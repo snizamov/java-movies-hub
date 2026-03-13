@@ -37,4 +37,10 @@ public class MoviesStore {
     public void deleteMovieById(int id) {
         movieStore.remove(id);
     }
+
+    public List<Movie> getMoviesByYear(int year) {
+        return movieStore.values().stream()
+                .filter(m -> m.getYear() == year)
+                .toList();
+    }
 }
