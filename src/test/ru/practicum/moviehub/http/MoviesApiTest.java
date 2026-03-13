@@ -361,7 +361,7 @@ public class MoviesApiTest {
 
         HttpRequest request = HttpRequest.newBuilder()
                 .DELETE()
-                .uri(URI.create(BASE + "/movies/0"))
+                .uri(URI.create(BASE + "/movies/2"))
                 .build();
 
         HttpResponse<String> response = client
