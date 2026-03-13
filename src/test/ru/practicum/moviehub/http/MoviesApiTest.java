@@ -295,7 +295,7 @@ public class MoviesApiTest {
         String body = response.body().trim();
         assertTrue(body.startsWith("{") && body.endsWith("}"),
                 "Ожидается JSON-объект");
-        assertTrue(body.contains("Криминальное чтиво"));
+        assertTrue(body.contains("Бриллиантовая рука"));
     }
 
     @Test
