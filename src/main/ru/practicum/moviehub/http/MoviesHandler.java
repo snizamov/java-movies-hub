@@ -11,6 +11,7 @@ import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 
 public class MoviesHandler extends BaseHttpHandler {
+    private static final int EARLIEST_FILM_YEAR = 1888;
     MoviesStore moviesStore;
     Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
