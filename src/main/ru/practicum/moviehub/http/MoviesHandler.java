@@ -147,8 +147,9 @@ public class MoviesHandler extends BaseHttpHandler {
             errorResponse.getDetails().add("количество символов в названии не должно превышать 100");
             hasError = true;
         }
-        if (movie.getYear() < 1888 || movie.getYear() > LocalDate.now().getYear() + 1) {
-            errorResponse.getDetails().add("год должен быть между 1888 и 2026");
+        if (movie.getYear() < EARLIEST_FILM_YEAR || movie.getYear() > LocalDate.now().getYear() + 1) {
+            errorResponse.getDetails().add(
+                    "год должен быть между " + EARLIEST_FILM_YEAR + " и " + (LocalDate.now().getYear() + 1));
             hasError = true;
         }
         return hasError;
