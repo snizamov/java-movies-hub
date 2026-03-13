@@ -9,7 +9,6 @@ import ru.practicum.moviehub.store.MoviesStore;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
-import java.util.List;
 
 public class MoviesHandler extends BaseHttpHandler {
     MoviesStore moviesStore;
