@@ -23,7 +23,7 @@ public class MoviesServer {
 
     public void start() {
         server.start();
-        System.out.println("Сервер запущен");
+        System.out.println("Сервер запущен на " + PORT + " порту");
     }
 
     public void stop() {
