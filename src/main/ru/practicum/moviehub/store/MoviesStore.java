@@ -16,8 +16,7 @@ public class MoviesStore {
     }
 
     public void addMovie(Movie movie) {
-        movie.setId(counter);
-        counter++;
+        movie.setId(++counter);
         movieStore.put(movie.getId(), movie);
     }
 
