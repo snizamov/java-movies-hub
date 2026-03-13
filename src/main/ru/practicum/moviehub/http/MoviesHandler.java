@@ -50,10 +50,7 @@ public class MoviesHandler extends BaseHttpHandler {
         if (query != null && query.startsWith("year=")) {
             try {
                 int year = Integer.parseInt(query.split("=")[1]);
-                List<Movie> sortedMovieList = moviesStore.getMovies().stream()
-                        .filter(m -> m.getYear() == year)
-                        .toList();
-                sendJson(exchange, 200, gson.toJson(sortedMovieList));
+                sendJson(exchange, 200, gson.toJson(moviesStore.getMoviesByYear(year)));
                 return;
             } catch (NumberFormatException e) {
                 ErrorResponse errorResponse = new ErrorResponse();
