@@ -70,7 +70,8 @@ public class MoviesHandler extends BaseHttpHandler {
 
                 if (movie == null) {
                     ErrorResponse errorResponse = new ErrorResponse();
-                    errorResponse.setError("Фильм не найден");
+                    errorResponse.setError("Фильм с ID-номером: " + id + " не найден. " +
+                            "Проверьте номер и повторите попытку");
                     sendJson(exchange, 404, gson.toJson(errorResponse));
                     return;
                 }
