@@ -231,8 +231,7 @@ public class MoviesApiTest {
         String body = response.body().trim();
         assertTrue(body.startsWith("{") && body.endsWith("}"),
                 "Ожидается JSON");
-        assertTrue(body.contains("год должен быть между 1888 и 2026"));
-
+        assertTrue(body.contains("год должен быть между 1888 и 2027"));
     }
 
     @Test
